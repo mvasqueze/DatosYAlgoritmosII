@@ -118,4 +118,14 @@ def printer(used):
     print(s)
     used.clear()
 
+'''
+def printer(used):
+    s = "\n".join(used)
+    print(s)
+    f = open("output.txt", "w")
+    f.write(s)
+    f.close()
+    used.clear()
+    '''
+
 main()
