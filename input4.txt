@@ -1,0 +1,33 @@
+2
+10 19 2
+involve
+riding
+precision
+lenses
+deadline
+campbell
+healing
+customize
+invited
+assumed
+campbell healing
+healing customize
+deadline customize
+deadline campbell
+involve campbell
+invited involve
+healing precision
+invited healing
+involve lenses
+invited riding
+healing involve
+deadline assumed
+lenses precision
+healing deadline
+campbell invited
+assumed invited
+customize assumed
+campbell lenses
+lenses deadline
+1 0 3
+queries 
