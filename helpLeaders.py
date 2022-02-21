@@ -1,6 +1,5 @@
 
 #función que reciba los argumentos y los temas
-from pickle import TRUE
 
 
 def main():
@@ -9,7 +8,7 @@ def main():
     used=[]
     toPrint=[]
     nCounter= 1
-    while nCounter<=n: #OJO: DELIMITAR LAS VARIABLES
+    while nCounter<=n: 
         aux= input().split()
         t= int(aux[0])
         p= int(aux[1])
@@ -25,10 +24,7 @@ def main():
             splittedVar=input().strip().upper().split() #This variable will save two words that should not be together
             splittedVar.sort()
             splittedVar.sort(key = len, reverse=True)
-            #The next list is saving the tuples s-tuples combitations of the previous words and the s-tuples with the same words
-            #splittedList=permutation(splittedVar)
-            #This loop is converting each s-tuple of splittedList to a string separated by empty spaces and saving them in the
-            # prohibitedList.
+            #The next list is saving the tuples s-tuples combitations of the previous words 
             prohibitedSet.append(' '.join(splittedVar))
             p=p-1
         # INPUT PART ENDS HERE AND PROCESSING PART STARTS IN THE LINE BELOW
@@ -54,22 +50,6 @@ def generator(tl, s, banned, used):
             used.append(tl.pop(0))
         return used
     if s==2:
-        '''
-        In this if and the next one, what I do is to make a kind of pop (save the head and then remove it)
-        so it won't repeat again in the next loops, because each loop makes all the possible permutations
-        for that head, so is not necessary that ir remains in the list. More over, each loops iterates over
-        a list that, of course, does not include the head: We have a list of 8 elementes (1-8), the 
-        firstWord variables save the element [1], then the code remove it from the list (list = 2-8) and will
-        start iterating over it; when the loop ends, we do the same with the remaining list: we take its head
-        in firstWord=2 and when we remove the element from the list, it looks like list=3-8 and repeat the 
-        process. This mechanism assures that there will not be repetitions of any kind.
-
-        THE BACKTRACKING MECHANISM: Having the list of banned s-tuples, when the code creates a new s-tuple, 
-        it compares it with all the elements of the banned list with the 'not in' command, if the s-tuple does not
-        appears in 'banned' the it will be concatenated to the 'used' list and then the combination that makes the 
-        s-tuple posible will be removed; on the contrary, if it finds that the s-tuple appears in the banned list, 
-        it would not be stored and the combination that makes the s-tuple posible will be removed.
-        '''
         while len(tl)>=s:
             firstWord=tl.pop(0) #The last tl word is the longest one, so I will start from here
             
@@ -113,6 +93,7 @@ def comp(A, s, banned):
     return True # It's valid
 
 # The goal of this method is to organize the output
+
 def printer(used):
     s = "\n".join(used)
     print(s)
@@ -126,6 +107,6 @@ def printer(used):
     f.write(s)
     f.close()
     used.clear()
-    '''
+   '''
 
 main()
